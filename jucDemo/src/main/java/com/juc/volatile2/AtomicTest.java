@@ -13,8 +13,8 @@ public class AtomicTest {
 
     void addTwice(){
         for (int i = 0; i < 1000; i++) {
-            count.getAndIncrement();
-            count.getAndIncrement();
+            int ret = count.getAndIncrement();
+            count.getAndSet(ret+1);
         }
 
     }
