@@ -1,4 +1,4 @@
-package com.juc.locksupport;
+package com.juc024.locksupport;
 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
@@ -9,7 +9,9 @@ import java.util.concurrent.locks.LockSupport;
  *
  */
 public class LockSupportTest {
+    private String name;
     public static void main(String[] args) {
+
         Thread t = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -32,7 +34,6 @@ public class LockSupportTest {
             Thread.sleep(1000);
             LockSupport.unpark(t);
             Thread.sleep(9000);
-            LockSupport.unpark(t);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
