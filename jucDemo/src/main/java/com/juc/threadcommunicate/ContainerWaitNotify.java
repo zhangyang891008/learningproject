@@ -1,10 +1,9 @@
 package com.juc.threadcommunicate;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Container {
+public class ContainerWaitNotify {
 
     private List<String> elems = new ArrayList<>();
 
@@ -17,7 +16,7 @@ public class Container {
     }
 
     public static void main(String[] args) {
-        Container c = new Container();
+        ContainerWaitNotify c = new ContainerWaitNotify();
         Object o = new Object();
         Thread operateThread = new Thread(new Runnable() {
             @Override
@@ -27,6 +26,7 @@ public class Container {
                         if(c.size() == 5) {
                             o.notify();
                             System.out.println("notify....");
+                            break;
                         }
                         c.add("elements");
                         System.out.println("add ..." + i);
