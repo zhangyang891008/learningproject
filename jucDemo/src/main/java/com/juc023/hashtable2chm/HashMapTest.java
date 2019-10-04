@@ -32,7 +32,7 @@ public class HashMapTest {
         public void run() {
             for (int i = start; i < start+ internal; i++) {
                 m.put(keys[i], values[i]);
-                System.out.println("put :" + i );
+                //System.out.println("put :" + i );
             }
         }
     }
