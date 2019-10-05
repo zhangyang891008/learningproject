@@ -2,6 +2,9 @@ package newjuc.juc18_02;
 
 import sun.misc.Unsafe;
 
+/**
+ * unsafe的实例普通类加载器加载的代码无法调用
+ */
 public class HelloUnsafe {
 
     public static void main(String[] args) {
