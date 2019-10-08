@@ -1,6 +1,5 @@
 package newjuc.juc20_interview;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -13,7 +12,7 @@ import java.util.List;
  * @TODO 用volatile修饰能够具有可见性，但是修饰容器并不会让容器中的属性具有可见性，目前解释不了这个现象。
  *
  */
-public class WithVolatile {
+public class L02_WithVolatile {
 
     static /*volatile */ List<String> list = Collections.synchronizedList(new LinkedList<>());
 
@@ -26,7 +25,7 @@ public class WithVolatile {
     }
 
     public static void main(String[] args) {
-        WithVolatile v = new WithVolatile();
+        L02_WithVolatile v = new L02_WithVolatile();
         new Thread(new Runnable() {
             @Override
             public void run() {

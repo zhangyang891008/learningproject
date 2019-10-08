@@ -7,7 +7,7 @@ import java.util.List;
  * 淘宝面试题：实现一个容器，提供add size方法，
  * 两个线程，一个添加10个元素到容器中，一个监控元素的个数，如果到达5个元素，线程输出提示
  */
-public class WithoutVolatile {
+public class L01_WithoutVolatile {
 
     static List<String> list = new ArrayList<>();
 
@@ -20,7 +20,7 @@ public class WithoutVolatile {
     }
 
     public static void main(String[] args) {
-        WithoutVolatile v = new WithoutVolatile();
+        L01_WithoutVolatile v = new L01_WithoutVolatile();
 
         new Thread(new Runnable() {
             @Override
