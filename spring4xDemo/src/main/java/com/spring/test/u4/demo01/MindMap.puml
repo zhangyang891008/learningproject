@@ -1,0 +1,21 @@
+@startmindmap
+* BeanFactory
+** InstantiationAwareBeanPostProcessor
+*** step1：postProcessBeforeInstantiation()
+*** step2：postProcessAfterInstantiation()
+*** step3：postProcessPropertyValues()
+** BeanPostProcessor
+*** step6：postProcessBeforeInitialization()
+*** step9：postProcessAfterInitialization()缓存单例bean
+** Bean
+*** BeanNameAware通过实现接口
+**** step4：setBeanName()
+*** BeanFactoryAware通过实现接口
+**** step5：setBeanFactory()
+*** step8：initMethod()配置到init-method属性
+*** step11：destroyMethod()配置到destroy-method属性
+*** InitializingBean通过实现接口
+**** step7：afterPropertiesSet()
+*** DisposableBean通过实现接口
+**** step10：destroy()
+@endmindmap
