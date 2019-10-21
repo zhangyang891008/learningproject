@@ -1,5 +1,7 @@
 package com.no283;
 
+import java.util.Arrays;
+
 /*
 283.移动零
 给定一个数组 nums，编写一个函数将所有 0 移动到数组的末尾，同时保持非零元素的相对顺序。
@@ -12,48 +14,31 @@ package com.no283;
 
 必须在原数组上操作，不能拷贝额外的数组。
 尽量减少操作次数。
+********************
+从-1位置开始记录非零元素下标，然后开始循环判断，如果当前位置元素i是零，直接下一个，如果非零，移动到++nonZeroPos的位置，最后把末几位全部填0
+
 
  */
 public class MoveZero {
-    public static void moveZero(int[] nums){
-        if(nums == null||nums.length<2)
+    public void moveZero(int[] nums){
+        if(nums==null || nums.length<2)
             return;
-
-        int curZero = 0;
-        int curNonZero = 0;
-        boolean finish = false;
-
-        while(curZero < nums.length && curNonZero<nums.length){
-            while(curZero<nums.length && nums[curZero]!=0){
-                curZero++;
-                if(curZero>nums.length-2){
-                    finish = true;
-                    break;
-                }
+        int nonZeroPos = -1;
+        for (int i = 0; i < nums.length; i++) {
+            if(nums[i]!=0){
+                nums[++nonZeroPos] = nums[i];
             }
-            curNonZero = curZero;
-            while(curNonZero<nums.length && nums[curNonZero]==0){
-                curNonZero++;
-                if(curNonZero>nums.length-1){
-                    finish = true;
-                    break;
-                }
-            }
-
-            //交换
-            if(!finish){
-                nums[curZero] = nums[curNonZero];
-                nums[curNonZero]=0;
-                curZero++;
-            }
+        }
+        while(nonZeroPos<nums.length-1){
+            nums[++nonZeroPos] = 0;
         }
     }
 
 
     public static void main(String[] args) {
 
-        int[] arr = {0,1};
-        moveZero(arr);
-        System.out.println("finish");
+        int[] arr ={1,0,0};
+        new MoveZero().moveZero(arr);
+        Arrays.stream(arr).forEach(System.out::println);
     }
 }
