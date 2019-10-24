@@ -9,4 +9,6 @@ public class Cup {
     public Cup(String color){
         this.color = color;
     }
+
+
 }
