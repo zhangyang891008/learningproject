@@ -1,0 +1,5 @@
+# 自动注解功能测试
+# SpringTest
+动态注入Bean
+# UserServiceFactoryBean
+实现接口BeanFactoryPostProcessor，通过factory注入单例Bean BeanDefinition

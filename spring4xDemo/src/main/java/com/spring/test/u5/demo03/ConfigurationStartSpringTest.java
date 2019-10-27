@@ -1,4 +1,4 @@
-package com.sprint.test.u5.demo03;
+package com.spring.test.u5.demo03;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 

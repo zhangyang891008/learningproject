@@ -1,0 +1,9 @@
+# 自动注解功能测试
+# ConfigurationStartSpringTest
+通过注册配置类到context中测试Spring启动
+# ConfigurationStartSpringTest2
+测试ConfigAppThree中@import注解引入ConfigAppFour是否可用
+# ConfigurationStartSpringTest3
+在ConfigurationStartSpringTest3中context注册了LogonAppConfig配置类；
+LogonAppConfig是一个配置类，通过@ImportResource导入了beans2.xml资源文件；
+beans2.xml文件中配置了两个bean:UserDao和LogDao.
