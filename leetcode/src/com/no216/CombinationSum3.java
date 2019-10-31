@@ -34,7 +34,7 @@ public class CombinationSum3 {
     public List<List<Integer>> combinationSum3(int k, int n) {
         int[] arr = new int[4];
         combina(n,k,0,1);
-        System.out.println("count:" + count);
+        //System.out.println("count:" + count);
         return retList;
     }
 
