@@ -41,4 +41,9 @@ public class Singleton04 {
         }
 
     }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
+    }
 }
