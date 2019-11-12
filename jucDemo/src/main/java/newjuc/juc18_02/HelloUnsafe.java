@@ -1,6 +1,6 @@
 package newjuc.juc18_02;
 
-import sun.misc.Unsafe;
+//import sun.misc.Unsafe;
 
 /**
  * unsafe的实例普通类加载器加载的代码无法调用
@@ -8,6 +8,7 @@ import sun.misc.Unsafe;
 public class HelloUnsafe {
 
     public static void main(String[] args) {
+        /*
         Unsafe unsafe = Unsafe.getUnsafe();
         try {
             Object o = unsafe.allocateInstance(Student.class);
@@ -16,7 +17,7 @@ public class HelloUnsafe {
             e.printStackTrace();
         }
 
-
+*/
     }
 }
 
