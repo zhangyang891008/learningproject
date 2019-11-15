@@ -160,8 +160,9 @@ private void doAcquireShared(int arg) {
         for (;;) {
             final Node p = node.predecessor();
             if (p == head) {
-            		//如果前驱节点是头节点，尝试让前驱节点获得共享锁，如果成功，将当前节点设置为头节点
+            		如果前驱节点是头节点，尝试抢锁
                 int r = tryAcquireShared(arg);
+                如果抢锁成功，设置自己为头节点，并清除p
                 if (r >= 0) {
                     setHeadAndPropagate(node, r);
                     p.next = null; // help GC
