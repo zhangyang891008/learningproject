@@ -1,5 +1,9 @@
 package com.no350;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 /*
 350. 两个数组的交集 II
 
@@ -27,12 +31,39 @@ package com.no350;
  */
 public class ArrayIntersection2 {
 
-
     public int[] intersect(int[] nums1, int[] nums2) {
-        return null;
+        if(nums1 == null || nums1.length == 0 || nums2 == null || nums2.length == 0)
+            return new int[0];
+        Arrays.sort(nums1);
+        Arrays.sort(nums2);
+
+        int posA = 0;
+        int posB = 0;
+        List<Integer> ret = new ArrayList<>();
+        while(posA < nums1.length && posB < nums2.length) {
+            if(nums1[posA] < nums2[posB]){
+                posA++;
+            } else if(nums1[posA] > nums2[posB]){
+                posB++;
+            } else{
+                ret.add(nums1[posA]);
+                posA++;
+                posB++;
+            }
+        }
+        int[] num = new int[ret.size()];
+        for (int i = 0; i < ret.size(); i++) {
+            num[i] = ret.get(i);
+        }
+        return num;
     }
 
     public static void main(String[] args) {
-
+        int[] nums1 = {4,9,5};
+        int[] nums2 = {9,4,9,8,4};
+        int[] intersect = new ArrayIntersection2().intersect(nums1, nums2);
+        for (int i : intersect) {
+            System.out.println(i);
+        }
     }
 }
