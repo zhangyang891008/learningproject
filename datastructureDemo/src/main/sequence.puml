@@ -1,0 +1,5 @@
+@startuml
+FullDeplementPanel -> AntRunner: genCode(modules) : execBuildFile
+AntRunner <-> execBuildFile
+
+@enduml
