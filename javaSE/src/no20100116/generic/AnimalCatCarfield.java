@@ -3,6 +3,9 @@ package no20100116.generic;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * super extend 通配符，向上转型 向下转型
+ */
 public class AnimalCatCarfield {
 
     public static void main(String[] args) {
