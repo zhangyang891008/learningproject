@@ -20,6 +20,7 @@ public class EnumSingleton {
 
         public EnumSingleton getInstance(){
             return singleton;
+
         }
     }
 
