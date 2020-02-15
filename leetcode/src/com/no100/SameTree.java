@@ -34,6 +34,9 @@ package com.no100;
 
 输出: false
 
+*****************
+递归判断树是否相同
+
  */
 public class SameTree {
     public boolean isSameTree(TreeNode p, TreeNode q) {

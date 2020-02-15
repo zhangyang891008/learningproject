@@ -22,6 +22,8 @@ import java.util.Map;
   [3,1,2],
   [3,2,1]
 ]
+***************
+回溯、深度优先遍历
 
  */
 public class Permute {
