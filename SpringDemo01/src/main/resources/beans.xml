@@ -1,0 +1,63 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!-- 1。通过构造器设置属性，进行初始化
+    <bean id="student" class="com.zy.entity.Student">
+        <constructor-arg name="name" value="zhangyang"></constructor-arg>
+        <constructor-arg name="age" value="11"></constructor-arg>
+    </bean>
+
+    -->
+    <!-- 2。通过属性设置
+    <bean id="student" class="com.zy.entity.Student">
+        <property name="name" value="mapang"></property>
+        <property name="age" value="22"></property>
+    </bean>
+-->
+
+    <!--3.map list set
+    <bean id="person" class="com.zy.entity.Person">
+        <property name="bookes">
+            <set>
+                <value>java</value>
+                <value>python</value>
+                <value>kotlin</value>
+            </set>
+        </property>
+
+        <property name="hobbies">
+            <array>
+                <value>singing</value>
+                <value>painting</value>
+            </array>
+        </property>
+        <property name="scores">
+            <map>
+                <entry>
+                    <key>
+                        <value>数学</value>
+                    </key>
+                    <value>88</value>
+                </entry>
+                <entry>
+                    <key>
+                        <value>语文</value>
+                    </key>
+                    <value>88</value>
+                </entry>
+            </map>
+        </property>
+    </bean>
+    -->
+
+    <!-- 4.ref-->
+    <bean id="cpu" class="com.zy.entity.CPU"></bean>
+    <bean id="memory" class="com.zy.entity.Memory"></bean>
+    <bean id="computer" class="com.zy.entity.Computer">
+        <property name="cpu" ref="cpu"></property>
+        <property name="memory" ref="memory"></property>
+    </bean>
+
+</beans>
