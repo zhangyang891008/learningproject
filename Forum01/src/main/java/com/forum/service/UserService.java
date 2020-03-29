@@ -26,6 +26,11 @@ public class UserService {
         userDao.save(user);
     }
 
+    public void update(User user){
+        System.out.println("update user");
+        userDao.update(user);
+    }
+
     public List<User> loadAll(){
         System.out.println("service:loadAll");
         return userDao.getAll();
@@ -39,13 +44,6 @@ public class UserService {
     public User loadById(int id) {
         System.out.println("load by id :"+id);
         return userDao.loadById(id);
-    }
-
-    /*
-    加锁
-     */
-    public void lockUser(){
-
     }
 
     /*
@@ -66,6 +64,9 @@ public class UserService {
         return userDao.getUserByUserName(username);
     }
 
+    /*
+    加锁
+     */
     public void lockUser(String username) throws UserNotExistException {
         System.out.println("lock user:"+username);
         User user = userDao.getUserByUserName(username);
@@ -76,6 +77,11 @@ public class UserService {
         userDao.update(user);
     }
 
+    /**
+     * 解锁
+     * @param username
+     * @throws UserNotExistException
+     */
     public void unLockUser(String username) throws UserNotExistException {
         System.out.println("unlock user:"+username);
         User user = userDao.getUserByUserName(username);
@@ -84,5 +90,14 @@ public class UserService {
         }
         user.setLocked(User.UNLOCK_USER);
         userDao.update(user);
+    }
+
+    /**
+     * 查询用户的登陆信息
+     * @param userId
+     * @return
+     */
+    public List<LoginLog> getLoginLogByUserId(String userId){
+        return loginLogDao.getLoginLogByUserId(userId);
     }
 }

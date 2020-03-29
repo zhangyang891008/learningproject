@@ -48,20 +48,16 @@ public class UserDao {
 
         NativeQuery sqlQuery = session.createSQLQuery("select * from t_user where user_name ='" + userName + "';").addEntity(User.class);
         List<User> list = sqlQuery.list();
-        User user = list.get(0);
+        User user = null;
+        if(list.size()>0){
+            user = list.get(0);
+        }
+
         System.out.println("getUserByUserName"+list.get(0));
         return user;
     }
 
     public void update(User user) {
         hibernateTemplate.update(user);
-    }
-
-    public void unLockUser(User user){
-
-    }
-
-    public void lockUser(User user){
-
     }
 }
