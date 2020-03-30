@@ -53,7 +53,7 @@ public class UserDao {
             user = list.get(0);
         }
 
-        System.out.println("getUserByUserName"+list.get(0));
+        //System.out.println("getUserByUserName"+list.get(0));
         return user;
     }
 

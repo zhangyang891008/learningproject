@@ -11,10 +11,11 @@
 	pageContext.setAttribute("ctp",request.getContextPath());
 %>
 <body>
-	<table width="1px" >
+	<table border="1">
 		<tr>
 			<th width="150px">用户序号</th>
 			<th width="150px">用户名称</th>
+			<th width="150px">密码</th>
 			<th width="150px">是否锁定</th>
 			<th width="150px">操作</th>
 		</tr>
@@ -22,6 +23,7 @@
 			<tr>
 				<td width="150px">${c.userId}</td>
 				<td width="150px">${c.userName}</td>
+				<td width="150px">${c.password}</td>
 				<td width="150px">${c.locked==0?"lock":"unlock"}</td>
 				<td width="150px">
 					<c:if test="${c.locked ==0}">
@@ -30,6 +32,8 @@
 					<c:if test="${c.locked ==1}">
 						<a href="${ctp}/unlockUser?username=${c.userName}">解锁</a>
 					</c:if>
+
+					<a href="${ctp}/toModifyPassword/${c.userId}">修改密码</a>
 				</td>
 			</tr>
 		</c:forEach>

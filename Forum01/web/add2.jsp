@@ -19,7 +19,9 @@
 
 	<a href="${ctp}/listUser">用户列表</a><br>
 	<a href="${ctp}/listBoards">板块列表</a><br>
+	<a href="${ctp}/toAddTopic">发帖</a><br>
 	<a href="${ctp}/login.jsp">去登陆</a><br>
+	<a href="${ctp}/logout">去注销</a><br>
 	<a href="${ctp}/register.jsp">去注册</a><br>
 </body>
 </html>

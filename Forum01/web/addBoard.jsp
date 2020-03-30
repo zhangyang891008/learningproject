@@ -16,7 +16,7 @@
 <body>
 板块信息：
 <form action="${ctp}/addBoard" method="post">
-	<table border="1px" width="60%">
+	<table border="1px" width="60%" align="center" >
 		<tr>
 			<td width="20%">板块名称</td>
 			<td width="80%">

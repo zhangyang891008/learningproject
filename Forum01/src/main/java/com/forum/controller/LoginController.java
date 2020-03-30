@@ -41,7 +41,7 @@ public class LoginController {
             user.setLastIp(request.getRemoteAddr());
             user.setLastVisit(new Date());
             userService.loginSuccess(user);
-            //TODO:设置sessionuser
+            //设置sessionuser
             session.setAttribute(CommonConstant.USER_CONTEXT,user);
             //TODO:设置登陆成功跳转地址
             //暂时改为跳转到默认页面

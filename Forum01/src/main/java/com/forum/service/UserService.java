@@ -41,7 +41,7 @@ public class UserService {
         userDao.deleteById(id);
     }
 
-    public User loadById(int id) {
+    public User loadUserById(int id) {
         System.out.println("load by id :"+id);
         return userDao.loadById(id);
     }
