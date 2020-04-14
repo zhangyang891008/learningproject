@@ -1,0 +1,27 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.zy.springmvc:SpringmvcDemo02 >------------------
+[INFO] Building SpringmvcDemo02 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ SpringmvcDemo02 ---
+[INFO] Deleting /Users/zhangyang/Documents/GitHub/learningproject/SpringmvcDemo02/target
+[INFO] 
+[INFO] --- maven-dependency-plugin:2.8:tree (default-cli) @ SpringmvcDemo02 ---
+[INFO] com.zy.springmvc:SpringmvcDemo02:jar:1.0-SNAPSHOT
+[INFO] +- org.springframework:spring-context:jar:5.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-aop:jar:5.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-beans:jar:5.2.4.RELEASE:compile
+[INFO] |  +- org.springframework:spring-core:jar:5.2.4.RELEASE:compile
+[INFO] |  |  \- org.springframework:spring-jcl:jar:5.2.4.RELEASE:compile
+[INFO] |  \- org.springframework:spring-expression:jar:5.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-webmvc:jar:5.2.4.RELEASE:compile
+[INFO] +- org.springframework:spring-web:jar:5.2.4.RELEASE:compile
+[INFO] \- commons-dbcp:commons-dbcp:jar:1.4:compile
+[INFO]    \- commons-pool:commons-pool:jar:1.5.4:compile
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.404 s
+[INFO] Finished at: 2020-03-20T11:07:25+08:00
+[INFO] ------------------------------------------------------------------------
