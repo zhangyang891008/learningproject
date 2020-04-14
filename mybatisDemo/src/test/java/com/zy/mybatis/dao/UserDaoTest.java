@@ -11,7 +11,7 @@ import org.junit.Test;
 import java.io.InputStream;
 import java.util.List;
 
-public class MainTest {
+public class UserDaoTest {
 
     SqlSessionFactory sqlSessionFactory = null;
 
@@ -35,8 +35,8 @@ public class MainTest {
         UserDao mapper = sqlSession.getMapper(UserDao.class);
 
         User user = new User();
-        user.setUserName("guangle");
-        user.setAddress("neu");
+        user.setUserName("guangle2");
+        user.setAddress("neu2");
         user.setPassword("123456");
         mapper.insert(user);
         sqlSession.commit();

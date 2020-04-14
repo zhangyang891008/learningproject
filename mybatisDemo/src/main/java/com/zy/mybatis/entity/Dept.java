@@ -1,16 +1,16 @@
 package com.zy.mybatis.entity;
 
 public class Dept {
-    private Integer deptId;
+    private Integer deptNo;
     private String deptName;
     private String location;
 
-    public Integer getDeptId() {
-        return deptId;
+    public Integer getDeptNo() {
+        return deptNo;
     }
 
-    public void setDeptId(Integer deptId) {
-        this.deptId = deptId;
+    public void setDeptNo(Integer deptNo) {
+        this.deptNo = deptNo;
     }
 
     public String getDeptName() {
@@ -32,7 +32,7 @@ public class Dept {
     @Override
     public String toString() {
         return "Dept{" +
-                "deptId=" + deptId +
+                "deptNo=" + deptNo +
                 ", deptName='" + deptName + '\'' +
                 ", location='" + location + '\'' +
                 '}';

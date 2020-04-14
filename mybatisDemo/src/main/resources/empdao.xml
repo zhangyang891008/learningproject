@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.mybatis.dao.EmpDao">
+
+    <resultMap id="comboResultMap" type="com.zy.mybatis.entity.Emp">
+
+    </resultMap>
+    <select id="loadById" resultMap="comboResultMap">
+        select * from t_emp e left join t_dept d where e.dept_no = d.dept_no and e.emp_no = #{arg0}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="deptNo">
+        insert into t_dept (dept_name,location) values(#{deptName},#{location});
+    </insert>
+
+</mapper>

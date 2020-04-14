@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zy.mybatis.dao.DeptDao">
+    <!--数据库表列名和类属性名不一致的另一种解决方法：通过别名的方式注入到类的属性中-->
+    <select id="loadById" resultType="com.zy.mybatis.entity.Dept">
+        select dept_no as deptNo,
+            dept_name as deptName,
+            location
+         from t_dept where dept_no=#{arg0}
+    </select>
+
+    <insert id="insert" useGeneratedKeys="true" keyProperty="deptNo">
+        insert into t_dept (dept_name,location) values(#{deptName},#{location});
+    </insert>
+
+</mapper>

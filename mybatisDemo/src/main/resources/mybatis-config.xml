@@ -10,7 +10,7 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
                 <!--mysql8.0版本要求要设置时区-->
-                <property name="url" value="jdbc:mysql://localhost:3306/test?serverTimezone=Asia/Shanghai"/>
+                <property name="url" value="jdbc:mysql://node1:3306/test?serverTimezone=Asia/Shanghai"/>
                 <property name="username" value="root"/>
                 <property name="password" value="Zy891008!"/>
             </dataSource>
@@ -18,5 +18,6 @@
     </environments>
     <mappers>
         <mapper resource="userdao.xml"/>
+        <mapper resource="deptdao.xml"/>
     </mappers>
 </configuration>
