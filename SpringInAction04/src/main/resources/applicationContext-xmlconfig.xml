@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <bean id="audience" class="com.chapter04.xmlconfig.Audience"></bean>
+    <bean id="performance" class="com.chapter04.xmlconfig.Performance"></bean>
+     <aop:config>
+         <aop:aspect ref="audience">
+             <aop:pointcut id="performPointcut" expression="execution(* com.chapter04.xmlconfig.Performance.perform(..))"/>
+             <aop:before method="silenceCellPhones" pointcut-ref="performPointcut"></aop:before>
+             <aop:before method="takeSeats" pointcut-ref="performPointcut"></aop:before>
+             <aop:after-returning method="applause" pointcut-ref="performPointcut"></aop:after-returning>
+             <aop:after-throwing method="demandRefund" pointcut-ref="performPointcut"></aop:after-throwing>
+         </aop:aspect>
+     </aop:config>
+    <aop:aspectj-autoproxy proxy-target-class="true"></aop:aspectj-autoproxy>
+</beans>
