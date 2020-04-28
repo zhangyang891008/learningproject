@@ -1,0 +1,21 @@
+spring:
+  profiles:
+    active: test
+
+student:
+  name: zhangyang
+  address: NEU
+
+---
+spring:
+  profiles: dev
+student:
+  name: devStudentName
+  address: devStudentAddress
+
+---
+spring:
+  profiles: test
+student:
+  name: testName
+  address: testAddresss
