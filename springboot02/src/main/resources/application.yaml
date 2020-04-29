@@ -1,0 +1,21 @@
+student:
+  name: zhangyang
+  age: 23
+  hobbies:
+    - swimming
+    - singing
+    - travelling
+  sleep: 5
+  dataSize: 5
+  date: 2020/05/22
+
+
+emp:
+  emp_no: 110
+  emp-name: empName
+  EMP_AGE: 23
+
+
+shopping:
+  fruit: 23;g
+  meat: 500;g
