@@ -1,4 +1,4 @@
-package ali.num02.num70;
+package ali.num70;
 
 /*
 70. 爬楼梯
