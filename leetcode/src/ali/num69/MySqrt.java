@@ -2,7 +2,7 @@ package ali.num69;
 
 /*
 69. x 的平方根
-
+ 
 实现 int sqrt(int x) 函数。
 
 计算并返回 x 的平方根，其中 x 是非负整数。
