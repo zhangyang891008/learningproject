@@ -46,6 +46,14 @@
                 </exclusion>
             </exclusions>
         </dependency>
+
+        <!--添加健康检查，可以将自己的健康状况汇报给eureka server-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
