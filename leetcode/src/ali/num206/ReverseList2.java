@@ -29,7 +29,7 @@ public class ReverseList2 {
         /*
         例如：1->2->3->4
         reverse后：4->3->2 , 1->2 即p为4对应的节点，1为head,2为head.next
-         */
+        */
         ListNode p = reverseList(head.next);
         head.next.next = head;
         head.next = null;
